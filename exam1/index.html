@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="counter">Counter: {{ samnumber }}</div>
+        <div class="btn">
+
+            <button v-on:click="add" class="btn1">追加</button>
+            <button v-on:click="del(index)" class="btn1">リセット</button>
+        </div>
+        </br>
+        <table class="table">
+
+
+            <tbody>
+                <tr class="tbodyinfo" v-for="(user, number) in users" v-bind:key="user.id">
+                    <td><input v-model="user.text"></td>
+                    <td><input v-model="user.number" type="number"></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const App = {
+            el: '#app',
+            data() {
+                return {
+                    users: [{ text: '', number: '' }],
+                    samnumber: 0,
+                    i: 0
+
+                }
+            },
+            methods: {
+                add: function () {
+
+                    x = this.i
+                    this.users.push({ text: '', number: '' })
+
+                    console.log(this.users[x].number)
+                    this.samnumber = this.samnumber + this.users[x].number
+
+                    this.i = this.i + 1
+                    console.log(x)
+                },
+                del: function (index) {
+                    this.users = [{ text: '', number: '' }]
+                    this.samnumber = 0
+                    this.x = 0
+                    this.i = 0
+                },
+            }
+        }
+        app1 = Vue.createApp(App)
+        app1.mount('#app')
+
+    </script>
+
+</body>
+
+</html>

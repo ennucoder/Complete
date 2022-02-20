@@ -1,0 +1,48 @@
+.counter{
+    text-align: center;
+
+}
+.btn{
+    text-align: center;
+}
+.table{
+    width: 100%;
+   
+    
+}
+.tbodyinfo td input{
+    width: 100%;
+    height: 50px;
+
+}
+
+.tbodyinfo td{
+    height: 100%;
+    
+}
+
+.btn1 {
+    min-width: 130px;
+    height: 40px;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #ced4da;
+    box-shadow: 0 5px #adb5bd;
+  }
+  .btn1:hover {
+    box-shadow: 0 3px #adb5bd;
+    top: 1px;
+  }
+  .btn1:active {
+    box-shadow: 0 0 #adb5bd;
+    top: 5px;
+  }
+
